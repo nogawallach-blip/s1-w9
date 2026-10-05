@@ -21,11 +21,13 @@ public class Card {
     // between 2 and 14
     public boolean isLegalRank (int x) {
        //complete this
+      return x >= 2 && x <= 14; 
     }
     
     //between 0 and 3
     public boolean isLegalSuit (int x) {
         //complete this
+      return x >= 0 && x <= 3;
     }
     
     public int rank ( ) {
@@ -40,5 +42,6 @@ public class Card {
     // compare the suits?
     public boolean outranks(Card other){
         //complete this
+        return this.myRank > other.myRank || (this.myRank == other.myRank && this.mySuit > other.mySuit); 
     }
  }
