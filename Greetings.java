@@ -7,6 +7,12 @@ public class Greetings extends JPanel {
    private int myWindowHeight = 400;
 	
    public Greetings() {
+      this(300,400);
+   }
+
+   public Greetings(int width, int height){
+      this.myWindowWidth = width;
+      this.myWindowHeight = height;
       JFrame easel = new JFrame();		
       easel.setSize (myWindowWidth, myWindowHeight);
       easel.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
@@ -15,7 +21,10 @@ public class Greetings extends JPanel {
    }
 	
    public void paintComponent (Graphics g) {
-      g.drawString ("Hi there!", 150, 200);	
-      g.drawRect(150, 187, 50, 15);
+      int w = this.getSize().width/2;
+      int h = this.getSize().height/2;
+
+     // g.drawString ("Hi there!", w, h);	
+      g.drawRect(w, h-20, 55, 23);
    }
 }
